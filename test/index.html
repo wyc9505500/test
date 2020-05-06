@@ -7,6 +7,21 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="app">111</div>
+    
 </body>
+<script>
+  window.onload=function(){
+      function Demo(name,age,happy="喜欢打游戏"){
+          this.name=name; //都有共同的名字
+          this.age=age;  //都有年龄
+          this.happy=happy;
+          this.render()
+      }
+      Demo.prototype.render=function(){
+          console.log(this)
+          document.body.innerHTML = `${this.name}今年${this.age}${this.happy}`
+      }
+      new Demo("小三",20)
+  }
+</script>
 </html>
